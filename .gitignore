@@ -1,1 +1,17 @@
 /target
+
+# Rust (Backend)
+/backend/target/
+target/
+**/*.rs.bk
+
+# Node / Vite / TypeScript (Frontend)
+/frontend/node_modules/
+node_modules/
+/frontend/dist/
+dist/
+
+# Archivos de sistema y editores
+.DS_Store
+Thumbs.db
+.vscode/

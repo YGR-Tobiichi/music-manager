@@ -29,7 +29,10 @@ impl MusicQueue {
         } else {
             SongStatus::InQueue
         };
-        println!("\n[+] Added '{}' by {} to the queue.", song.name, song.artist);
+        println!(
+            "\n[+] Added '{}' by {} to the queue.",
+            song.name, song.artist
+        );
         self.songs.push(song);
         self.sync_statuses();
     }
@@ -75,10 +78,7 @@ impl MusicQueue {
         self.songs.insert(0, song);
         self.sync_statuses();
 
-        println!(
-            "\n[^] Moved '{}' to position #1. Now Playing!",
-            song_name
-        );
+        println!("\n[^] Moved '{}' to position #1. Now Playing!", song_name);
         Ok(())
     }
 

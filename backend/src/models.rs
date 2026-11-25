@@ -1,7 +1,8 @@
+use serde::{Deserialize, Serialize};
 use std::fmt;
 
 // Enum for the status of a song.
-#[derive(Debug, Clone, PartialEq)]
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub enum SongStatus {
     Playing,
     InQueue,
@@ -17,7 +18,7 @@ impl fmt::Display for SongStatus {
     }
 }
 
-#[derive(Debug, Clone)] // Struct representing a song.
+#[derive(Debug, Clone, Serialize, Deserialize)] // Struct representing a song.
 pub struct Song {
     pub name: String,
     pub duration: String,
